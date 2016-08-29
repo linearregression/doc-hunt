@@ -39,17 +39,6 @@ func createFileRegSource(source *Source) error {
 	return err
 }
 
-// ParseIdentifier extract identifier and category from string
-func ParseIdentifier(value string) (string, SourceCategory) {
-	_, err := pcre.Compile(value, pcre.ANCHORED)
-
-	if err == nil {
-		return value, SFILEREG
-	}
-
-	return value, SERROR
-}
-
 // ListConfig return a config list
 func ListConfig() (*[]Config, error) {
 	configs := []Config{}
