@@ -20,13 +20,13 @@ fmt:
 gometalinter:
 	gometalinter -D gotype --vendor --deadline=240s --dupl-threshold=200 -e '_string' -j 5 ./...
 
-doc-hunt:
+doc-check:
 	doc-hunt check -e
 
 run-tests:
 	./test.sh
 
-test-all: gometalinter run-tests doc-hunt
+test-all: gometalinter run-tests doc-check
 
 test-package:
 	go test -race -cover -coverprofile=/tmp/doc-hunt github.com/antham/doc-hunt/$(pkg)

@@ -6,7 +6,7 @@ go:
 before_install:
   - wget -O doc-hunt https://github.com/antham/doc-hunt/releases/download/v2.1.1/doc-hunt_linux_amd64
   - chmod 777 doc-hunt
-  - export PATH=$PATH:$PWD/doc-hunt
+  - export PATH=$PATH:$PWD
   - go get github.com/onsi/gomega
   - go get github.com/onsi/ginkgo
   - go get github.com/Masterminds/glide
